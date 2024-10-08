@@ -1,0 +1,26 @@
+# Python files
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node.js files
+node_modules/
+build/
+dist/
+
+# Environment variables
+.env
+.DS_Store
+
+# Logs
+*.log
+
+# Python-specific files
+*.egg-info/
+
+# IDE-specific files (optional, depending on your IDE)
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,13 @@
+/* frontend/src/App.css */
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
