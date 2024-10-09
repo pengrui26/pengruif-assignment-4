@@ -30,7 +30,7 @@ jobs:
         run: |
           source venv/bin/activate
           make run &
-          sleep 10  # Wait for servers to start
+          sleep 60  # Wait for servers to start
 
       - name: Test server
         run: |
