@@ -4,35 +4,34 @@ name: Python application
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Set up Python 3.12
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.12'
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
 
-    - name: Install backend dependencies
-      run: |
-        python -m venv venv
-        source venv/bin/activate
-        make install
+      - name: Install backend dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          make install
 
-    - name: Run server
-      run: |
-        source venv/bin/activate
-        make run &
-        sleep 10  # Wait for servers to start
+      - name: Run server
+        run: |
+          source venv/bin/activate
+          make run &
+          sleep 10  # Wait for servers to start
 
-    - name: Test server
-      run: |
-        curl -X POST -H "Content-Type: application/json" -d '{"query":"machine learning"}' http://localhost:5000/search
+      - name: Test server
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{"query":"machine learning"}' http://localhost:8001/search

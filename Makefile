@@ -9,4 +9,3 @@ run:
     (cd backend && python app.py &) \
     # Run frontend
     && (cd frontend && npm start &)
-
