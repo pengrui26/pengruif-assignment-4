@@ -2,7 +2,7 @@
 
 install:
 	# Install backend and frontend dependencies
-	pip install -r backend/requirements.txt
+	pip install -r requirements.txt
 	cd frontend && npm install
 
 run:
