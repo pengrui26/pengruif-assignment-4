@@ -8,5 +8,6 @@ install:
 run:
 	# Run backend
 	(cd backend && python app.py &) \
+	sleep 40 && \
 	# Run frontend
 	(cd frontend && npm start &)
