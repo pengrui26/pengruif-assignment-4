@@ -8,7 +8,7 @@ install:
 run:
 	# Run backend in the background
 	(cd backend && python app.py &)
-	# Wait for 60 seconds before starting frontend
-	sleep 60
+	# Wait for 40 seconds before starting frontend
+	sleep 40
 	# Start frontend
 	(cd frontend && npm start &)
